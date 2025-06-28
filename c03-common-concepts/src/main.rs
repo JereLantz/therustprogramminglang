@@ -1,3 +1,22 @@
+fn add69(x: i32) -> i32 {
+    // rust palauttaa automaattisesti funktion viimeisen rivin arvon.
+    // Jos halutaan returnata aiemmin on mahdollista käyttää return avainsanaa
+    // muiden kielien lailla
+    x + 69
+}
+
+fn expression(x: i32){
+    let y = {
+        // tämä on expression. Expressionissä ei ole viimeistä puolipistettä ;
+        let z = 3;
+        // Eli tämä returnaa z + 1
+        z + 1
+    };
+
+    println!("parameter is {x}");
+    println!("y is {y}")
+}
+
 fn arrays(){
     // array on aina fixed pituus
     // 5 pitkä array
@@ -38,4 +57,8 @@ fn tuples(){
 fn main() {
     tuples();
     arrays();
+    expression(69);
+
+    let number = 420;
+    println!("{} plus 69 = {}", number, add69(number))
 }
